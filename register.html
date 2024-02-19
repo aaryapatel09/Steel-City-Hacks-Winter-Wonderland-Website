@@ -1,0 +1,29 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Handle user registration
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    // Insert the new user into the database (you'll need to implement this part)
+    // Redirect to user profile page after successful registration
+    header("Location: profile.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Wellness Community - Register/Login</title>
+    <!-- CSS styles -->
+</head>
+<body>
+    <!-- HTML content -->
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <h2>Register</h2>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?php
+// Assume user authentication is already handled and user data is retrieved from the database
+$username = "JohnDoe";
+$email = "john@example.com";
+$wellnessGoals = array(
+    "Exercise for at least 30 minutes every day",
+    "Practice mindfulness meditation for 10 minutes daily"
+);
+$achievements = array(
+    "Completed 30-day yoga challenge",
+    "Ran a half-marathon in under 2 hours"
+);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Wellness Community - User Profile</title>
+    <!-- CSS styles -->
+</head>
+<body>
+    <!-- HTML content -->
+    <h2>User Profile</h2>
+    <p>Username: <?php echo $username; ?></p>
+    <p>Email: <?php echo $email; ?></p>
+    <h3>Wellness Goals</h3>
+    <ul>
+        <?php foreach ($wellnessGoals as $goal): ?>
+            <li><?php echo $goal; ?></li>
+        <?php endforeach; ?>
+    </ul>
+    <h3>Achievements</h3>
+    <ul>
+        <?php foreach ($achievements as $achievement): ?>
+            <li><?php echo $achievement; ?></li>
+        <?php endforeach; ?>
+    </ul>
+</body>
+</html>
+
